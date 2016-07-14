@@ -61,7 +61,9 @@ WHERE ao.ADORDERNUMBER = @AdOrderNumber_Param
 AND (dbu.BEANTYPE = 'localedge_Bundle' OR dbu.BEANTYPE = 'localedge_Product')
 -- AND ((dbu.BEANTYPE = 'localedge_Bundle' AND ar.AMOUNT = 0)
 -- OR (dbu.BEANTYPE = 'localedge_Product' AND ar.AMOUNT > 0))
+
 AND bea.DELETEDBY IS NULL
+
 AND RS.ADORDERID = ao.ID 
 AND l.primary=1
 order by ar.EFFECTIVEDATE

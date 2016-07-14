@@ -53,7 +53,7 @@ join nra on nra.id=(
       (select id from adnetworks where name = 'CUSTOMER') 
     ) 
 ) 
-
+  
 JOIN DATABEANUSE dbu ON dbu.RUNSCHEDULEID = rtc.ADRUNSCHEDULEID
 JOIN DATABEAN bea ON bea.ROOTID = dbu.ROOTID
 
